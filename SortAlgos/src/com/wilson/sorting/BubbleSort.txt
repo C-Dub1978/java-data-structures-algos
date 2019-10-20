@@ -1,0 +1,26 @@
+Bubble Sort -
+
+// fields:
+unsortedPartitionIndex = 6 (The last index in the array is the last index of the unsorted partition)
+i = 0 (index used to traverse the array from start to finish)
+
+Starting from first index(0), to the unsortedPartitionIndex - 1, compare i, and i+1... if i+1 is less than i, swap them
+traverse until you get to the unsortedPartitionIndex -1, at this point the greatest value will be in that position.
+
+Next set i back to index 0, and unsortedPartionIndex should be lessened by 1....
+
+continue until unsortedPartitionIndex is equal to 1;
+
+Pseudo:
+
+1. set unsortedPartitionIndex to length of array - 1
+2. set i to 0 to start
+3. while unsortedPartitionIndex > 1
+  a. while i < unsortedPartitionIndex
+     check i and i + 1, if i is greater, swap it with i+1
+     continue above and increment i by 1 each time, until i is unsortedPartitionIndex - 1
+  b. reset i to 0
+  c. set unsortedPartitionIndex -= 1
+
+ 
+
