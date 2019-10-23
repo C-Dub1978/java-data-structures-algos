@@ -1,0 +1,23 @@
+SelectionSort -
+
+Divides the array into sorted and unsorted partitions, just like bubble sort
+
+Fields:
+lastUnsortedIndex (array length - 1 default) = last index of the unsorted partition
+i (1 default) = index to traverse the array left to right (for ascending)
+largest (0 default) = index of largest value in the unsorted partition
+
+We traverse the array and find the largest element in the unsorted partition, and then we swap that with the last element in the unsorted partition - at that point, the last element
+will be in its proper partition.
+
+Pseudo -
+1. lastUnsorted index is length of array - 1;
+2. i = 0
+3. largest = 0;
+
+4. while i <= lastSortedIndex
+  a. check to see if value of i is greater than largest, if true, set largest to i - i++ to move to next index
+  b. continue until we get to lastSortedIndex - swap lastSorted index value with largest value
+5. lastSortedIndex --;
+6. continue this traversal until lastSortedIndex is index 1, swap if needed
+  

@@ -45,13 +45,4 @@ public class BubbleSort {
 		array[i] = array[j];
 		array[j] = placeholder;
 	}
-	
-	public static String toString(int[] sortedArr) {
-		StringBuilder sb = new StringBuilder("[");
-		for (int i = 0; i < sortedArr.length - 1; i++) {
-			sb.append(" " + sortedArr[i] + ",");
-		}
-		sb.append(" " + sortedArr[sortedArr.length - 1] + " ]");
-		return sb.toString();
-	}
 }

@@ -4,6 +4,8 @@ public class SortEntry {
 
 	public static void main(String[] args) {
 		
+		System.out.println("Bubble Sorts: ==================");
+		System.out.println("");
 		// BUBBLE SORT
 		int[] unsorted1 = new int[] {55, 2, 29, -1, 0, 11, 27, -13, 18};
 		int[] unsorted2 = new int[] {123, -22, -76, 49, 0, 33, 47, 1, 14, -3, 90, 49, 18};
@@ -13,14 +15,29 @@ public class SortEntry {
 		int[] sorted2 = BubbleSort.sort(unsorted2, "ascending");
 		int[] sorted3 = BubbleSort.sort(unsorted3, "descending");
 		int[] sorted4 = BubbleSort.sort(unsorted4, "descending");
-		System.out.println("Sorted 1: " + BubbleSort.toString(sorted1));
-		System.out.println("Sorted 2: " + BubbleSort.toString(sorted2));
+		System.out.println("Sorted 1: " + SortEntry.toString(sorted1));
+		System.out.println("Sorted 2: " + SortEntry.toString(sorted2));
 		System.out.println("");
-		System.out.println("Sorted 3: " + BubbleSort.toString(sorted3));
-		System.out.println("Sorted 4: " + BubbleSort.toString(sorted4));
+		System.out.println("Sorted 3: " + SortEntry.toString(sorted3));
+		System.out.println("Sorted 4: " + SortEntry.toString(sorted4));
 		
+		System.out.println("");
+		System.out.println("Selection Sorts ================");
+		System.out.println("");
 		// SELECTION SORT
-		
+		int[] selectionSort1 = SelectionSort.sort(unsorted1, "ascending");
+		int[] selectionSort2 = SelectionSort.sort(unsorted2, "ascending");
+		System.out.println("Sorted 1: " + SortEntry.toString(selectionSort1));
+		System.out.println("Sorted 2: " + SortEntry.toString(selectionSort2));
+	}
+	
+	public static String toString(int[] sortedArr) {
+		StringBuilder sb = new StringBuilder("[");
+		for (int i = 0; i < sortedArr.length - 1; i++) {
+			sb.append(" " + sortedArr[i] + ",");
+		}
+		sb.append(" " + sortedArr[sortedArr.length - 1] + " ]");
+		return sb.toString();
 	}
 
 }
