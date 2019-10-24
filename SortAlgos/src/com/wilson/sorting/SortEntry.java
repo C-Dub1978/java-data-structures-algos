@@ -28,7 +28,7 @@ public class SortEntry {
 		int[] unsorted5 = new int[] {55, 2, 29, -1, 0, 11, 27, -13, 18};
 		int[] unsorted6 = new int[] {123, -22, -76, 49, 0, 33, 47, 1, 14, -3, 90, 49, 18};
 		int[] unsorted7 = new int[] {33, -180, -3, 73, 11, 39, 0, -1, 85, 38};
-		int[] unsorted8 = new int[] {3, 23, 398, 88, -11, -92, 0, 33, 82, -3, 8, 83};
+		int[] unsorted8 = new int[] {3, 23, 398, 88, -11, 8, -92, 0, 33, 82, -3, 8, 83, 8, 398, -92};
 		int[] selectionSort1 = SelectionSort.sort(unsorted5, "ascending");
 		int[] selectionSort2 = SelectionSort.sort(unsorted6, "ascending");
 		int[] selectionSort3 = SelectionSort.sort(unsorted7, "descending");

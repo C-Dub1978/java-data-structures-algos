@@ -16,7 +16,7 @@ public class SelectionSort {
 		int i = 1;
 		int largest = 0;
 		
-		while(lastUnsortedIndex > 1) {
+		while(lastUnsortedIndex > 0) {
 			while(i <= lastUnsortedIndex) {
 				if(unsorted[i] > unsorted[largest]) {
 					largest = i;
@@ -36,7 +36,7 @@ public class SelectionSort {
 		int i = unsorted.length - 2;
 		int largest = unsorted.length - 1;
 		
-		while(lastUnsortedIndex < unsorted.length - 2) {
+		while(lastUnsortedIndex < unsorted.length - 1) {
 			while(i >= lastUnsortedIndex) {
 				if(unsorted[i] > unsorted[largest]) {
 					largest = i;
