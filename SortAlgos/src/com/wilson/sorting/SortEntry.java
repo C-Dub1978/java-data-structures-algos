@@ -41,6 +41,15 @@ public class SortEntry {
 		System.out.println("");
 	}
 	
+	public static void swap(int[] unsorted, int i, int j) {
+		if (unsorted[i] == unsorted[j]) {
+			return;
+		}
+		int placeholder = unsorted[j];
+		unsorted[j] = unsorted[i];
+		unsorted[i] = placeholder;
+	}
+	
 	public static String toString(int[] sortedArr) {
 		StringBuilder sb = new StringBuilder("[");
 		for (int i = 0; i < sortedArr.length - 1; i++) {
@@ -49,5 +58,7 @@ public class SortEntry {
 		sb.append(" " + sortedArr[sortedArr.length - 1] + " ]");
 		return sb.toString();
 	}
+	
+	
 
 }

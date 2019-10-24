@@ -13,7 +13,7 @@ public class BubbleSort {
 		while(unsortedPartitionIndex >= 1) {
 			while(index < unsortedPartitionIndex) {
 				if (unsorted[index] > unsorted[index + 1]) {
-					swap(unsorted, index, index + 1);
+					SortEntry.swap(unsorted, index, index + 1);
 				}
 				index++;
 			}
@@ -27,7 +27,7 @@ public class BubbleSort {
 		while(unsortedPartitionIndex <= unsorted.length - 1) {
 			while(index > unsortedPartitionIndex) {
 				if (unsorted[index] > unsorted[index - 1]) {
-					swap(unsorted, index, index - 1);
+					SortEntry.swap(unsorted, index, index - 1);
 				}
 				index--;
 			}
@@ -35,14 +35,5 @@ public class BubbleSort {
 			unsortedPartitionIndex++;
 		}
 		return unsorted;
-	}
-	
-	private static void swap(int[] array, int i, int j) {
-		if (i == j) {
-			return;
-		}
-		int placeholder = array[i];
-		array[i] = array[j];
-		array[j] = placeholder;
 	}
 }

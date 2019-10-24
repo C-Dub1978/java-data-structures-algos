@@ -23,7 +23,7 @@ public class SelectionSort {
 				}
 				i++;
 			}
-			swap(unsorted, largest, lastUnsortedIndex);
+			SortEntry.swap(unsorted, largest, lastUnsortedIndex);
 			i = 1;
 			largest = 0;
 			lastUnsortedIndex--;
@@ -43,20 +43,11 @@ public class SelectionSort {
 				}
 				i--;
 			}
-			swap(unsorted, largest, lastUnsortedIndex);
+			SortEntry.swap(unsorted, largest, lastUnsortedIndex);
 			i = unsorted.length - 2;
 			largest = unsorted.length - 1;
 			lastUnsortedIndex++;
 		}
 		return unsorted;
-	}
-	
-	public static void swap(int[] unsorted, int largest, int lastUnsortedIndex) {
-		if (unsorted[largest] == unsorted[lastUnsortedIndex]) {
-			return;
-		}
-		int placeholder = unsorted[lastUnsortedIndex];
-		unsorted[lastUnsortedIndex] = unsorted[largest];
-		unsorted[largest] = placeholder;
 	}
 }
