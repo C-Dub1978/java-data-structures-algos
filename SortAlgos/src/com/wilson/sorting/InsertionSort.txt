@@ -1,0 +1,28 @@
+Insertion Sort -
+
+Partitions the array into sorted/unsorted partitions, but it grows the sorted partition from left (front) to right(end)
+
+Fields -
+firstUnsortedIndex = 1  - this is the first index of the unsorted partition (index 0 is considered to be sorted)
+i = 0 - used to traverse the sorted partition from right to left
+newElement = array[firstUnsortedIndex] - the value we want to insert into the sorted partition (front)
+
+Essentially, to start, we our sorted partition is simply index 0 (i).... The first unsorted index is i + 1 (always 1 to the right of i)..
+
+We want to take our firstUnsorted index, and move backwards through the sorted partition to figure out where need to place the value of it in any previous index moving from right to left
+
+we will check the current value of array[firstUnsortedIndex] - if its LESS THAN array[i], we need to save the value of array[firstUnsortedIndex]
+in a placeholder. Next we shift the array[i] value into the position of array[firstUnsortedIndex], and continue to shift i until it is greater than or equal to the placeholder value
+When this condition is true, we insert the placeholder value into this index.
+
+Pseudo -
+1. Set firstUnsortedIndex = 1
+2. Set i = 0 (first index of sorted)
+3. Set newElement = array[firstUnsortedIndex]
+3A. While firstUnsortedIndex is less than array length
+4. While newElement is less than or equal to each index in the sorted array, keep traversing from right to left in sorted
+5. If we get to a value that is less than or equal to our current newElement, set a placeholder for that index value, swap the newElement in, and shift each
+    index from that index right until we get to the firstUnsorted index.
+6. increment i++
+7. increment firstUnsortedIndex++
+

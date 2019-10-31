@@ -39,6 +39,30 @@ public class SortEntry {
 		System.out.println("Sorted 3: " + SortEntry.toString(selectionSort3));
 		System.out.println("Sorted 4: " + SortEntry.toString(selectionSort4));
 		System.out.println("");
+		
+		System.out.println("");
+		System.out.println("Insertion Sorts =================");
+		System.out.println("");
+		// INSERTION SORT
+		int[] unsorted9 = new int[] {33, 29, -13, 39, -1, 0, 9, 34, 128, -19, 1};
+		int[] unsorted10 = new int[] {-12, 343, 0, 22, 89, 1, -3, 82, 9, -22};
+		int[] insertionSort1 = InsertionSort.sort(unsorted9);
+		int[] insertionSort2 = InsertionSort.sort(unsorted10);
+		System.out.println("Sorted 1: " + SortEntry.toString(insertionSort1));
+		System.out.println("Sorted 2: " + SortEntry.toString(insertionSort2));
+		System.out.println("");
+	}
+	
+	public static void shiftArray(int[] array, int start, int finish, int insertValue) {
+		System.out.println("Start is: " + start + ", Finish is: " + finish);
+		if (start < finish) {
+			int placeholder = array[start];
+			array[start] = insertValue;
+			start++;
+			SortEntry.shiftArray(array, start, finish, placeholder);
+		} else {
+			return;
+		}
 	}
 	
 	public static void swap(int[] unsorted, int i, int j) {
@@ -58,7 +82,5 @@ public class SortEntry {
 		sb.append(" " + sortedArr[sortedArr.length - 1] + " ]");
 		return sb.toString();
 	}
-	
-	
 
 }
